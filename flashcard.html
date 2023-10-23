@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Flashcard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon-logo.png" rel="icon">
+  
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <!-- <h1 class="logo me-auto"><a href="index.html">PHProLabs</a></h1> -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/logo-fix.png" alt=""></a>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="mentoring.html">Mentoring</a></li>
+
+          <li class="dropdown"><a href="#"><span>Post Test</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="flashcard.html">Flashcard</a></li>
+              <li><a href="games.html">Games</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+
+      <a href="intern.html" class="get-started-btn">Intern</a> <!--harusnya link courses diganti jadi login-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <style>
+      #quizWrap {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      #quizQn {
+        padding: 20px;
+        background: #4c93ba;
+        color: #fff;
+        font-size: 24px;
+        border-radius: 10px;
+      }
+
+      #quizAns {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+      }
+
+      #quizAns input[type=radio] {
+        display: none;
+      }
+
+      #quizAns label {
+        background: #fafafa;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      #quizAns label.correct {
+        background: #d8ffc4;
+        border: 1px solid #60a03f;
+      }
+
+      #quizAns label.wrong {
+        background: #ffe8e8;
+        border: 1px solid #c78181;
+      }
+
+      * {
+        font-family: arial, sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+      }
+
+      .widget-wrap {
+        width: 600px;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.4);
+      }
+    </style>
+    <script type='text/javascript' src=''></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript' src=''></script>
+    </head>
+
+    <body oncontextmenu='return false' class='snippet-body'>
+      <div class="widget-wrap">
+        <h1>AYO BERLATIH</h1>
+        <div id="quizWrap"></div>
+      </div>
+      <script type='text/javascript'>var quiz = {
+          data: [
+
+            {
+              q: "Setiap variabel di PHP diawali dengan simbol?",
+              o: [
+                "#",
+                "$",
+                "%",
+                "*"],
+
+              a: 1
+            },
+
+            {
+              q: "Berikut ini contoh operator aritmatika, kecuali",
+              o: [
+                "+",
+                "*",
+                ">=",
+                "/"],
+
+              a: 2
+            },
+
+            {
+              q: "Indeks array di PHP dimulai dari",
+              o: [
+                "0",
+                "1",
+                "2",
+                "3"],
+
+              a: 0
+            },
+
+            {
+              q: "Tipe data integer di PHP digunakan untuk data",
+              o: [
+                "Bilangan bulat",
+                "Bilangan Pecahan",
+                "Boolean",
+                "NULL"],
+
+              a: 0
+            },
+
+            {
+              q: "Untuk menghapus isi array, menggunakan fungsi",
+              o: [
+                "delete",
+                "create",
+                "select",
+                "unset"],
+
+              a: 3
+            }
+
+
+          ],
+
+
+          hWrap: null, // HTML quiz container
+          hQn: null, // HTML question wrapper
+          hAns: null, // HTML answers wrapper
+
+          now: 0, // current question
+          score: 0, // current score
+
+          init: () => {
+            quiz.hWrap = document.getElementById("quizWrap");
+
+            quiz.hQn = document.createElement("div");
+            quiz.hQn.id = "quizQn";
+            quiz.hWrap.appendChild(quiz.hQn);
+
+            quiz.hAns = document.createElement("div");
+            quiz.hAns.id = "quizAns";
+            quiz.hWrap.appendChild(quiz.hAns);
+
+            quiz.draw();
+          },
+
+          draw: () => {
+            quiz.hQn.innerHTML = quiz.data[quiz.now].q;
+
+            quiz.hAns.innerHTML = "";
+            for (let i in quiz.data[quiz.now].o) {
+              let radio = document.createElement("input");
+              radio.type = "radio";
+              radio.name = "quiz";
+              radio.id = "quizo" + i;
+              quiz.hAns.appendChild(radio);
+              let label = document.createElement("label");
+              label.innerHTML = quiz.data[quiz.now].o[i];
+              label.setAttribute("for", "quizo" + i);
+              label.dataset.idx = i;
+              label.addEventListener("click", () => { quiz.select(label); });
+              quiz.hAns.appendChild(label);
+            }
+          },
+
+          select: option => {
+            let all = quiz.hAns.getElementsByTagName("label");
+            for (let label of all) {
+              label.removeEventListener("click", quiz.select);
+            }
+
+            let correct = option.dataset.idx == quiz.data[quiz.now].a;
+            if (correct) {
+              quiz.score++;
+              option.classList.add("correct");
+            } else {
+              option.classList.add("wrong");
+            }
+
+            quiz.now++;
+            setTimeout(() => {
+              if (quiz.now < quiz.data.length) { quiz.draw(); } else { quiz.hQn.innerHTML = `Selamat kamu telah berhasil menjawab ${quiz.score} dari ${quiz.data.length} dengan benar`; quiz.hAns.innerHTML = ""; }
+            }, 1000);
+          }, reset: () => {
+            quiz.now = 0;
+            quiz.score = 0;
+            quiz.draw();
+          }
+        };
+
+        window.addEventListener("load", quiz.init);</script>
+    </body>
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
