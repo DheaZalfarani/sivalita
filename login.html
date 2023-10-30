@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,13 +54,13 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <section id="login" class="login">
+    <section id="login" class="login" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="login-container">
                         <h2 class="text-center">Masuk</h2>
-                        <form>
+                        <form action="process_login.php" method="post">
                             <div class="form-group">
                                 <label for="username">Username:</label>
                                 <input type="text" id="username" name="username" class="form-control" required>
@@ -71,7 +70,7 @@
                                 <input type="password" id="password" name="password" class="form-control" required>
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-primary btn-block" href="index.html">Login</button>
+                            <button type="submit" class="btn btn-primary btn-block" href="index.html" name="login">Login</button>
                         </form>
                     </div>
                 </div>
