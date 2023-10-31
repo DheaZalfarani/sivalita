@@ -172,11 +172,44 @@ Terdapat beberapa tabel yang dibuat pada basis data SIVALITA dan berikut adalah 
 			<td>Campak rubella</td>
 	</tr>
 </table>
-<h5>Tabel jadwalshift</h5>
+<h4>Tabel jadwalshift</h4>
+<table>
+	<th>No.</th>
+	<th>Nama</th>
+	<th>Tipe Data</th>
+	<th>Panjang Data</th>
+	<th>Contoh Data</th>
+	<tr>
+			<td>1</td>
+			<td>id</td>
+			<td>int</td>
+			<td>11</td>
+			<td>1</td>
+	</tr>
+	<tr>
+			<td>2</td>
+			<td>nama</td>
+			<td>varchar</td>
+			<td>100</td>
+			<td>dr. Hospitaria</td>
+	</tr>
+	<tr>
+			<td>3</td>
+			<td>tanggal</td>
+			<td>datetime</td>
+			<td>50</td>
+			<td>2023-10-21 08:00</td>
+	</tr>
+	<tr>
+			<td>4</td>
+			<td>waktu</td>
+			<td>time</td>
+			<td>-</td>
+			<td>16:00</td>
+	</tr>
+</table>
 
-Kelompok 9
-Ketua:
-Dhea Zalfarani Syah Munir Putri (215150601111014)
-Anggota:
-Elsa Aritonang (215150607111005)
+<h2>Tim Pengembang</h2>
+Dhea Zalfarani Syah Munir Putri (215150601111014)<BR>
+Elsa Aritonang (215150607111005)<BR>
 Salvia Dyah Kurniasari (215150601111006)
