@@ -1,6 +1,6 @@
-Sivalita : Sistem Informasi Vaksinasi Balita
-Sistem Informasi yang bertugas untuk mengelola informasi terkait vaksinasi balita untuk instansi medis tertentu.
-Sistem informasi berbasis website dengan menggunakan bahasa pemrograman html, css, js, dan php
+![image](https://github.com/DheaZalfarani/sivalita/assets/103364743/1b639229-0786-499f-9a0c-54f9af7b9f79)
+
+SIVALITA: Sistem Informasi Vaksinasi Balita merupakan sebuah platform yang dirancang khusus untuk membantu fasilitas kesehatan dalam mengelola proses vaksinasi pada balita secara efisien dan terstruktur. Sistem ini memungkinkan anggota fasilitas kesehatan, mulai dari petugas medis hingga manajemen, untuk menggantikan metode manual yang sebelumnya digunakan dalam pelacakan dan administrasi terkait dengan keperluan vaksinasi. 
 
 Kelompok 9
 Ketua:
