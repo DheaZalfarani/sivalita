@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "dbconnect.php";
 session_start();
 
 if ($conn->connect_error) {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result->num_rows == 1) {
         // Login berhasil, atur sesi pengguna
         $_SESSION['username'] = $username;
-        header('Location: index.html'); // Ganti ini dengan halaman setelah login
+        header('Location: index.php'); // Ganti ini dengan halaman setelah login
         exit();
     } else {
         echo "<script>alert('Username atau Password salah!'); window.location='login.html';</script>";

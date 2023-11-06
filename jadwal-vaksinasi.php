@@ -38,11 +38,11 @@
             <a href="index.html" class="logo me-auto">SIVALITA</a>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.php">Beranda</a></li>
                     <li><a href="jadwal.html">Jadwal</a></li>
-                    <li><a href="vaksinasi.html">Data Vaksinasi</a></li>
-                    <li><a href="petugas.html">Petugas Medis</a></li>
-                    <li><a href="inventaris.html">Inventaris</a></li>
+                    <li><a href="data-vaksinasi.php">Data Vaksinasi</a></li>
+                    <li><a href="petugas.php">Petugas Medis</a></li>
+                    <li><a href="inventaris.php">Inventaris</a></li>
                     <li><a href="profil.html"><img src="profil.png" width="25" height="25"></img></a></li>
                 </ul>
             </nav>
@@ -270,11 +270,11 @@
                     <div class="col-lg-4 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Beranda</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Beranda</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="jadwal.html">Jadwal</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="vaksinasi.html">Data Vaksinasi</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="petugas.html">Petugas Medis</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="inventaris.html">Inventaris</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="data-vaksinasi.php">Data Vaksinasi</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="petugas.php">Petugas Medis</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="inventaris.php">Inventaris</a></li>
                         </ul>
                     </div>
                 </div>

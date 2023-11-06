@@ -253,4 +253,66 @@ if (isset($_POST['hapus4'])) {
     }
 }
 ;
+
+// tambah data petugas
+if (isset($_POST['submit5'])) {
+    $id = $_POST["ID"];
+    $Nama = $_POST["Nama"];
+    $Jabatan = $_POST["Jabatan"];
+    $Kontak = $_POST["Kontak"];
+    $addtotable = mysqli_query($conn, "INSERT INTO petugas SET
+        ID='$id', 
+        Nama='$Nama',
+        Jabatan='$Jabatan',
+        Kontak='$Kontak'  
+    ");
+
+    if ($addtotable) {
+        header('location: petugas.php');
+    } else {
+        echo 'Gagal menambahkan data petugas!';
+        header('location: petugas.php');
+    }
+    ;
+}
+
+
+// edit data vaksin
+if (isset($_POST['update5'])) {
+    $id = $_POST["ID"];
+    $Nama = $_POST["Nama"];
+    $Jabatan = $_POST["Jabatan"];
+    $Kontak = $_POST["Kontak"];
+    $updatedata = mysqli_query($conn, "UPDATE petugas SET 
+        ID='$id', 
+        Nama='$Nama',
+        Jabatan='$Jabatan',
+        Kontak='$Kontak'
+    WHERE ID='$id'");
+    if ($updatedata) {
+        echo 'Berhasil memperbarui data petugas!';
+
+        header('location: petugas.php');
+    } else {
+        echo 'Gagal memperbarui data petugas!';
+        header('location: petugas.php');
+    }
+}
+;
+
+// hapus data vaksin
+if (isset($_POST['hapus5'])) {
+    $id = $_POST["ID"];
+    $delete = mysqli_query($conn, "DELETE FROM petugas WHERE ID='$id'");
+    //hapus juga semua data barang ini di tabel keluar-masuk
+
+    //cek apakah berhasil
+    if ($delete) {
+        header('location: petugas.php');
+    } else {
+        echo 'Gagal menghapus data petugas!';
+        header('location: petugas.php');
+    }
+}
+;
 ?>

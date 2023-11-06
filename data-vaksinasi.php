@@ -38,11 +38,11 @@
             <a href="index.html" class="logo me-auto">SIVALITA</a>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.php">Beranda</a></li>
                     <li><a href="jadwal.html">Jadwal</a></li>
-                    <li><a href="vaksinasi.html">Data Vaksinasi</a></li>
-                    <li><a href="petugas.html">Petugas Medis</a></li>
-                    <li><a href="inventaris.html">Inventaris</a></li>
+                    <li><a href="data-vaksinasi.php">Data Vaksinasi</a></li>
+                    <li><a href="petugas.php">Petugas Medis</a></li>
+                    <li><a href="inventaris.php">Inventaris</a></li>
                     <li><a href="profil.html"><img src="profil.png" width="25" height="25"></img></a></li>
                 </ul>
             </nav>
@@ -220,134 +220,77 @@
             </style>
         </div>
     </div><br><br><br>
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 footer-contact">
-                        <h3>SIVALITA</h3>
-                        <p>
-                            Malang, 2023<br>
-                            Indonesia <br><br>
-                            <strong>Phone:</strong> +62 8888 8888 12<br>
-                            <strong>Email:</strong> sivalita@gmail.com<br>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Beranda</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="jadwal.html">Jadwal</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="vaksinasi.html">Data Vaksinasi</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="petugas.html">Petugas Medis</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="inventaris.html">Inventaris</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container d-md-flex py-4">
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>SIVALITA</span></strong>. All Rights Reserved
-                </div>
-            </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
-    <!-- Modal Add -->
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Tambah Data Vaksinasi</h4>
-                    <button type="button" class="btn-close" data-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="function.php" method="post">
-                        <div class="form-group">
-                            <label>Nama Anak</label>
-                            <input name="nama" type="text" class="form-control" placeholder="Nama Anak Balita" value=""
-                                required>
-                        </div><br>
-                        <div class="form-group">
-                            <label>Jenis Vaksin</label>
-                            <input name="jenisvaksin" type="text" class="form-control" placeholder="Jenis Vaksin"
-                                required>
-                        </div><br>
-                        <div class="form-group">
-                            <label>Waktu</label>
-                            <input name="waktu" type="date" class="form-control" required>
-                        </div><br>
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                    <input type="submit" name="submit3" class="btn" style="background-color: #3FBBC0; color: white;"
-                        value="Simpan">
-                </div>
-                </form>
-            </div>
-        </div>
+<div class="footer-top">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 footer-contact">
+        <h3>SIVALITA</h3>
+        <p>
+          Malang, 2023<br>
+          Indonesia <br><br>
+          <strong>Phone:</strong> +62 8888 8888 12<br>
+          <strong>Email:</strong> sivalita@gmail.com<br>
+        </p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Beranda</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="jadwal.html">Jadwal</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="data-vaksinasi.php">Data Vaksinasi</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="petugas.php">Petugas Medis</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="inventaris.php">Inventaris</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6 footer-newsletter">
+        <h4>Let Us Know You</h4>
+        <p>Drop Your Email</p>
+        <form action="" method="post">
+          <input type="email" name="email"><input type="submit" value="Subscribe">
+        </form>
+      </div>
 
     </div>
+  </div>
+</div>
+
+<div class="container d-md-flex py-4">
+
+  <div class="me-md-auto text-center text-md-start">
+    <div class="copyright">
+      &copy; Copyright <strong><span>SIVALITA</span></strong>. All Rights Reserved
     </div>
-    <!-- Modal Add -->
-    <script>
-        function myFunction() {
-            // Declare variables
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
+  </div>
+  <div class="social-links text-center text-md-right pt-3 pt-md-0">
+    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  </div>
+</div>
+</footer><!-- End Footer -->
 
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    </script>
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+  class="bi bi-arrow-up-short"></i></a>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <!-- Start datatable js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- import bootstrap  -->
-    <title>Jadwal Shift Petugas Medis</title>
+    <title>Data Petugas Medis</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -55,7 +55,7 @@
 
         <div class="breadcrumbs">
             <div class="container">
-                <h2>Jadwal Shift Petugas Medis</h2>
+                <h2>Data Petugas Medis</h2>
                 <p> </p>
             </div>
         </div>
@@ -64,11 +64,11 @@
         <div class="container" data-bs-aos="fade-up">
             <div style="text-align: center"><input id="myInput" onkeyup="myFunction()"
                     style="width:600px; padding: 10px 15px; border-radius: 10px" id="search"
-                    placeholder="Cari jadwal shift.."></input></div>
+                    placeholder="Cari data petugas medis.."></input></div>
             <br><br>
             <a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
                 style="background-color: #3FBBC0; border-style: none; border-radius: 10px; padding: 10px 15px;color: white">Tambah
-                Jadwal</a><br><br>
+                Data</a><br><br>
             <br>
             <!-- tabel -->
             <table id="myTable" style="width:100%;">
@@ -76,9 +76,11 @@
 
                     <tr>
                         <th style="width:5%">No.</th>
-                        <th style="width:30%">Nama Petugas</th>
-                        <th style="width:30%">Waktu</th>
-                        <th style="width:10%">Aksi</th>
+                        <th style="width:20%">ID</th>
+                        <th style="width:20%">Nama</th>
+                        <th style="width:20%">Jabatan</th>
+                        <th style="width:20%">Kontak</th>
+                        <th style="width:20%">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -90,11 +92,11 @@
                     $no = 1;
 
                     //mengambil data dari tabel barang
-                    $jadwal = mysqli_query($conn, "select * from jadwalshift ORDER BY tanggal, waktu");
+                    $petugas = mysqli_query($conn, "select * from petugas");
 
                     //melooping(perulangan) dengan menggunakan while
-                    while ($data = mysqli_fetch_array($jadwal)) {
-                        $id = $data['id'];
+                    while ($data = mysqli_fetch_array($petugas)) {
+                        $id = $data['ID'];
 
                         ?>
                         <tr>
@@ -104,36 +106,39 @@
                                 <?php echo $no++; ?>
                             </td>
                             <td>
-                                <?php echo $data['nama']; ?>
-
+                                <?php echo $data['ID']; ?>
                             </td>
                             <td>
-                                <?php echo $data['tanggal']; ?> -
-                                <?php echo $data['waktu']; ?>
+                                <?php echo $data['Nama']; ?>
                             </td>
-
+                            <td>
+                                <?php echo $data['Jabatan']; ?>
+                            </td>
+                            <td>
+                                <?php echo $data['Kontak']; ?>
+                            </td>
                             <td>
 
                                 <!-- membuat tombol dengan ukuran small berwarna biru  -->
                                 <!-- data-target setiap modal harus berbeda, karena akan menampilkan data yang berbeda pula
                                             caranya membedakannya, gunakan id_barang sebagai pembeda data-target di setiap modal -->
                                 <a href="" class="btn btn-sm btn-warning" data-toggle="modal"
-                                    data-target="#edit<?php echo $data['id']; ?>" style="color:white">Edit</a>
+                                    data-target="#edit<?php echo $data['ID']; ?>" style="color:white">Edit</a>
                                 <a href="" class="btn btn-sm btn-danger" data-toggle="modal"
-                                    data-target="#hapus<?php echo $data['id']; ?>">Hapus</a>
+                                    data-target="#hapus<?php echo $data['ID']; ?>">Hapus</a>
                             </td>
                         </tr>
 
                         <!-- untuk melihat bentuk-bentuk modal kalian bisa mengunjungi laman bootstrap dan cari modal di kotak pencariannya -->
                         <!-- id setiap modal juga harus berbeda, cara membedakannya dengan menggunakan id_barang -->
                         <!-- modal edit -->
-                        <div class="modal fade" id="edit<?php echo $data['id']; ?>" tabindex="-1"
+                        <div class="modal fade" id="edit<?php echo $data['ID']; ?>" tabindex="-1"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edit Jadwal Shift</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Edit Data Petugas</h5>
                                         <button type="button" class="btn-close" data-dismiss="modal"></button>
                                         </button>
                                     </div>
@@ -143,30 +148,34 @@
                                         <div class="modal-body">
                                             <form action="function.php" method="post">
                                                 <div class="form-group">
-                                                    <label>Nama Petugas</label>
-                                                    <input name="nama" type="text" class="form-control"
-                                                        placeholder="Nama Petugas Medis"
-                                                        value="<?php echo $data['nama']; ?>">
-                                                </div><br>
-
-                                                <div class="form-group">
-                                                    <label>Tanggal dan Waktu Mulai</label>
-                                                    <input name="tanggal" type="datetime-local" class="form-control"
-                                                        value="<?php echo $data['tanggal']; ?>">
+                                                    <label>ID</label>
+                                                    <input name="ID" type="text" class="form-control"
+                                                        placeholder="ID petugas"
+                                                        value="<?php echo $data['ID']; ?>">
                                                 </div><br>
                                                 <div class="form-group">
-                                                    <label>Waktu Selesai</label>
-                                                    <input name="waktu" type="time" class="form-control"
-                                                        value="<?php echo $data['waktu']; ?>">
-                                                </div>
-                                                <br>
+                                                    <label>Nama</label>
+                                                    <input name="Nama" type="text" class="form-control"
+                                                        value="<?php echo $data['Nama']; ?>">
+                                                </div><br>
+                                                <div class="form-group">
+                                                    <label>Jabatan</label>
+                                                    <input name="Jabatan" type="text" class="form-control"
+                                                        value="<?php echo $data['Jabatan']; ?>">
+                                                </div><br>
+                                                <div class="form-group">
+                                                    <label>Kontak</label>
+                                                    <input name="Kontak" type="text" class="form-control"
+                                                        value="<?php echo $data['Kontak']; ?>">
+                                                </div><br>
+                                                
                                                 <input type="hidden" name="id" value="<?= $id; ?>">
 
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default"
                                                 data-dismiss="modal">Batal</button>
-                                            <input type="submit" name="update" class="btn"
+                                            <input type="submit" name="update5" class="btn"
                                                 style="background-color: #3FBBC0; color: white;" value="Simpan">
                                         </div>
                                         </form>
@@ -177,27 +186,27 @@
 
                         <!--modal edit -->
                         <!-- modal hapus -->
-                        <div class="modal fade" id="hapus<?php echo $data['id']; ?>" tabindex="-1"
+                        <div class="modal fade" id="hapus<?php echo $data['ID']; ?>" tabindex="-1"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <form method="post" action="function.php">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Jadwal Shift</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Data petugas</h5>
                                             <button type="button" class="btn-close" data-dismiss="modal"></button>
                                             </button>
                                         </div>
                                         <!-- di dalam modal-body terdapat 4 form input yang berisi data.
                         data-data tersebut ditampilkan sama seperti menampilkan data pada tabel. -->
                                         <div class="modal-body">
-                                            Apakah Anda yakin ingin menghapus jadwal shift ini?
+                                            Apakah Anda yakin ingin menghapus data petugas ini?
                                             <input type="hidden" name="id" value="<?= $id; ?>">
                                         </div>
 
                                         <!-- Modal footer -->
                                         <div class="modal-footer">
                                             <button type="button" class="btn" data-dismiss="modal">Batal</button>
-                                            <button type="submit" class="btn btn-danger" name="hapus">Hapus</button>
+                                            <button type="submit" class="btn btn-danger" name="hapus5">Hapus</button>
                                         </div>
 
                                     </form>
@@ -269,31 +278,33 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambahk Jadwal Shift</h5>
+                    <h4 class="modal-title">Tambah Data Petugas</h4>
                     <button type="button" class="btn-close" data-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <form action="function.php" method="post">
                         <div class="form-group">
-                            <label>Nama Petugas</label>
-                            <input name="nama" type="text" class="form-control" placeholder="Nama Petugas Medis"
+                            <label>ID</label>
+                            <input name="ID" type="text" class="form-control" placeholder="ID petugas"
                                 value="" required>
                         </div><br>
-
                         <div class="form-group">
-                            <label>Tanggal dan Waktu Mulai</label>
-                            <input name="tanggal" type="datetime-local" class="form-control" required>
+                            <label>Nama</label>
+                            <input name="Nama" type="text" class="form-control" placeholder="Nama petugas" required>
                         </div><br>
                         <div class="form-group">
-                            <label>Waktu Selesai</label>
-                            <input name="waktu" type="time" class="form-control" required>
-                        </div>
-                        <br>
+                            <label>Jabatan</label>
+                            <input name="Jabatan" type="text" class="form-control" placeholder="Jabatan petugas" required>
+                        </div><br>
+                        <div class="form-group">
+                            <label>Kontak</label>
+                            <input name="Kontak" type="text" class="form-control" placeholder="Kontak petugas" required>
+                        </div><br>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                    <input type="submit" name="submit" class="btn" style="background-color: #3FBBC0; color: white;"
+                    <input type="submit" name="submit5" class="btn" style="background-color: #3FBBC0; color: white;"
                         value="Simpan">
                 </div>
                 </form>
@@ -314,7 +325,7 @@
 
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
+                td = tr[i].getElementsByTagName("td")[2];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
