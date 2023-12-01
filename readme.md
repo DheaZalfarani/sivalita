@@ -12,7 +12,7 @@ Sebagai sebuah sistem informasi, berikut ini merupakan beberapa fitur yang ada p
 <h2>Bahasa yang digunakan</h2>
 Pengembangan SIVALITA dilakukan dengan menggunakan HTML untuk membuat kerangka website. Untuk memberikan sentuhan pada tampilan website, digunakan kombinasi dari penggunaan CSS Native dan Bootstrap yang merupakan salah satu framework dari CSS. SIVALITA juga menggunakan JavaScript untuk memungkinkan website menunjukkan behavior tertentu dan PHP serta MySQL untuk mengelola data yang ada pada website.
 
-<h2>Data Pengaksesan</h2>
+<h2>Daftar Data Pengguna</h2>
 Untuk bisa mengakses SIVALITA diperlukan pengaksesan login terlebih dahulu menggunakan akun sebagai berikut:
 <h4>Data Login</h4>
 <table>
